@@ -15,13 +15,13 @@ groupadd GRP_SEC
 
 echo "Criar usuários"
 
-useradd calos -m -s /bin/bash -p $(openssl passwd -crypt Abc123)
-useradd maria -m -s /bin/bash -p $(openssl passwd -crypt Abc123)
-useradd joao -m -s /bin/bash -p $(openssl passwd -crypt Abc123)
-useradd debora -m -s /bin/bash -p $(openssl passwd -crypt Abc123)
-useradd sebastiana -m -s /bin/bash -p $(openssl passwd -crypt Abc123)
-useradd roberto -m -s /bin/bash -p $(openssl passwd -crypt Abc123)
-useradd josefina -m -s /bin/bash -p $(openssl passwd -crypt Abc123)
-useradd amanda -m -s /bin/bash -p $(openssl passwd -crypt Abc123)
-useradd rogerio -m -s /bin/bash -p $(openssl passwd -crypt Abc123)
+useradd calos -m -s /bin/bash -p $(openssl passwd -crypt Abc123) -G GRP_ADM
+useradd maria -m -s /bin/bash -p $(openssl passwd -crypt Abc123) -G GRP_ADM
+useradd joao -m -s /bin/bash -p $(openssl passwd -crypt Abc123) -G GRP_ADM
+useradd debora -m -s /bin/bash -p $(openssl passwd -crypt Abc123) -G GRP_VEN
+useradd sebastiana -m -s /bin/bash -p $(openssl passwd -crypt Abc123) -G GRP_VEN
+useradd roberto -m -s /bin/bash -p $(openssl passwd -crypt Abc123) -G GRP_VEN
+useradd josefina -m -s /bin/bash -p $(openssl passwd -crypt Abc123) -G GRP_SEC
+useradd amanda -m -s /bin/bash -p $(openssl passwd -crypt Abc123) -G GRP_SEC
+useradd rogerio -m -s /bin/bash -p $(openssl passwd -crypt Abc123) -G GRP_SEC
 
